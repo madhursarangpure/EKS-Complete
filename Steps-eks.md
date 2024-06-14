@@ -61,7 +61,7 @@ eksctl version
 ## Create EKS CLUSTER
 
 ```bash
-eksctl create cluster --name=my-eks22 \
+eksctl create cluster --name=MS-EKS \
                       --region=ap-south-1 \
                       --zones=ap-south-1a,ap-south-1b \
                       --version=1.30 \
@@ -69,10 +69,10 @@ eksctl create cluster --name=my-eks22 \
 
 eksctl utils associate-iam-oidc-provider \
     --region ap-south-1 \
-    --cluster my-eks22 \
+    --cluster MS-EKS \
     --approve
 
-eksctl create nodegroup --cluster=my-eks22 \
+eksctl create nodegroup --cluster=MS-EKS \
                        --region=ap-south-1 \
                        --name=node2 \
                        --node-type=t3.medium \
